@@ -6,8 +6,9 @@ This repository contains the implementation of classical machine learning algori
 - **Linear Regression** (with and without regularization)
 - **Logistic Regression**
 - **Support Vector Machine (SVM)**
+- **Naive Bayes**
 
-Each of these models is implemented with gradient descent, normalization, and other relevant methods to illustrate the core concepts of machine learning.
+Each of these models is implemented with gradient descent, normalization, and other relevant methods to illustrate the core concepts of machine learning. These algorithms were implemented as part of the coursework for **IE7300: Statistical Learning** at Northeastern University.
 
 ## Table of Contents
 
@@ -17,6 +18,7 @@ Each of these models is implemented with gradient descent, normalization, and ot
   - [Linear Regression](#linear-regression)
   - [Logistic Regression](#logistic-regression)
   - [Support Vector Machine (SVM)](#support-vector-machine-svm)
+  - [Naive Bayes](#naive-bayes)
 - [Usage](#usage)
 - [Evaluation Metrics](#evaluation-metrics)
 - [Contributing](#contributing)
@@ -30,6 +32,7 @@ This project is intended to provide a hands-on implementation of classical machi
 - Showcase how gradient descent, regularization, and evaluation metrics are used.
 - Provide utility functions for normalization, evaluation, and plotting model performance.
 
+These models were part of a course project for **IE7300: Statistical Learning** at Northeastern University, where the focus was on understanding the underlying mathematics and the use of different machine learning techniques.
 
 ## Models
 
@@ -68,6 +71,16 @@ Key methods:
 - `predict()`: Predicts the class labels based on the trained model.
 - `evaluate()`: Computes accuracy and prints evaluation metrics.
 
+### Naive Bayes
+
+The `NaiveBayes` class implements the Naive Bayes classification model:
+- **Laplace Smoothing**: Optional parameter to apply Laplace smoothing to avoid zero probabilities.
+- **Conditional Probabilities**: Calculates the conditional probabilities for each feature given the class label.
+
+Key methods:
+- `fit()`: Trains the Naive Bayes model by calculating the required conditional probabilities.
+- `predict()`: Predicts the class label for a given dataset by computing the posterior probabilities.
+
 ## Evaluation Metrics
 
 For each model, evaluation metrics such as **Root Mean Squared Error (RMSE)**, **Sum of Squared Errors (SSE)**, **Accuracy**, **Precision**, and **Recall** are provided. These metrics help assess model performance during training and testing.
@@ -77,7 +90,6 @@ For each model, evaluation metrics such as **Root Mean Squared Error (RMSE)**, *
 - **SSE** (Sum of Squared Errors): Sum of the squared differences between predicted and actual values.
 - **Accuracy**: Percentage of correctly predicted classes for classification models.
 - **Precision & Recall**: Evaluate the performance for binary classification.
-
 
 ## License
 
